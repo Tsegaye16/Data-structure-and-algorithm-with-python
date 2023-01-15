@@ -120,39 +120,30 @@ class Doubly_Linked_List:
                 n = n.nex_ref
             n.prev_ref.nex_ref = None
 
-
-    def delete_By_value(self,value):
+    def delete_By_value(self, value):
         if self.head is None:
             print("The linked list is empty")
             return
         if self.head.nex_ref is None:
-            if value==self.head.data:
-                self.head=None
+            if value == self.head.data:
+                self.head = None
             else:
                 print("The value is not present")
             return
-        if self.head.data==value:
-            self.head=self.head.nex_ref
-            self.head.prev_ref=None
+        if self.head.data == value:
+            self.head = self.head.nex_ref
+            self.head.prev_ref = None
             return
-        n=self.head
+        n = self.head
         while n.nex_ref is not None:
-            if value==n.data:
+            if value == n.data:
                 break
-            n=n.nex_ref
+            n = n.nex_ref
         if n.nex_ref is not None:
-            n.nex_ref.prev_ref=n.prev_ref
-            n.prev_ref.nex_ref=n.nex_ref
+            n.nex_ref.prev_ref = n.prev_ref
+            n.prev_ref.nex_ref = n.nex_ref
         else:
-            if n.data==value:
-                n.prev_ref.nex_ref=None
+            if n.data == value:
+                n.prev_ref.nex_ref = None
             else:
                 print("The value is empty")
-
-
-
-
-
-
-
-

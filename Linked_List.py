@@ -120,4 +120,4 @@ class LinkedList:
             print("The node is absent")
         else:
             n.ref=n.ref.ref
-            
+
